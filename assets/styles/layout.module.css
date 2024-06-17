@@ -1,0 +1,7 @@
+.footer_links{
+    
+}
+
+.link_title{
+    @apply font-bold text-xl mb-3
+}
