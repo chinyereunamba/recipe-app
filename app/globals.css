@@ -58,5 +58,5 @@ h4 {
 
 .dashboard-content{
   width: calc(100% - 15rem);
-  @apply relative left-60 border border-white py-10 min-h-screen bg-lavender_blush-900
+  @apply relative left-60 border border-white py-10 px-10 min-h-screen bg-lavender_blush-900
 }
