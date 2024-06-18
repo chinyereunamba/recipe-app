@@ -1,5 +1,7 @@
+import ByCategory from "@/components/home/ByCategory";
 import Intro from "@/components/home/Intro";
 import LatestRecipes from "@/components/home/LatestRecipes";
+import TrendingRecipes from "@/components/home/TrendingRecipes";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <main className="">
       <Intro />
       <LatestRecipes />
+      <ByCategory />
+      <TrendingRecipes />
     </main>
     // <div className="home-page">
       

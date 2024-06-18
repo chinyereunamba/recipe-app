@@ -48,8 +48,11 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <small className="flex justify-center text-center font-semibold pt-4">
-        All rights reserved. &copy; Copyright 2024. Chinyere Unamba
+      <small className="flex justify-center text-center font-semibold pt-4 text-pearl">
+        All rights reserved. &copy; Copyright 2024.
+        <Link href={"https://chinyereunamba.vercel.app"} target="_blank">
+         {" "} Chinyere Unamba
+        </Link>
       </small>
     </footer>
   )
