@@ -6,11 +6,14 @@ import { HiOutlineEnvelope } from "react-icons/hi2"
 import { IoIosHelpCircleOutline } from "react-icons/io"
 import {
   PiHeart,
+  PiHeartBold,
   PiGearSixLight,
   PiSlidersHorizontal,
   PiUsersThree,
   PiCaretRight,
   PiCaretLeft,
+  PiUser,
+  PiSignOut
 } from "react-icons/pi"
 import { BsClock } from "react-icons/bs"
 import { FaRegStar, FaStarHalfAlt } from "react-icons/fa"
@@ -35,6 +38,9 @@ export {
   IoIosHelpCircleOutline,
   PiHeart,
   PiCaretLeft,
+  PiUser,
+  PiSignOut,
+  PiHeartBold,
   PiCaretRight,
   PiGearSixLight,
   PiSlidersHorizontal,

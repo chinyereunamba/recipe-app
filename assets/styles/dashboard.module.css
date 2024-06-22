@@ -1,16 +1,15 @@
 .nav_link {
-  @apply border-r-4 border-transparent hover:border-midnight_green
-   hover:bg-pearl-900 
+  @apply  hover:bg-pearl-900 p-3
+  rounded-lg
   transition-colors;
 }
 
 .nav_link.active {
-  @apply border-r-4 border-midnight_green bg-pearl-900 
-  transition-colors;
+  @apply  bg-pearl-900 
 }
 
 .nav_link a {
-  @apply flex items-center px-5 py-3 w-full gap-3 
+  @apply flex items-center w-full gap-3 
   text-base text-gray-500 font-normal 
   hover:font-medium hover:text-midnight_green transition-all;
 }
@@ -25,5 +24,10 @@
 }
 
 .btn{
-  @apply p-3 shadow-sm hover:shadow-md bg-white rounded-lg cursor-pointer
+  @apply p-3 shadow-sm hover:shadow-md bg-white 
+  rounded-lg cursor-pointer transition-all
+}
+
+.heart{
+  @apply absolute top-2 right-2 cursor-pointer
 }

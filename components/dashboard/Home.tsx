@@ -1,35 +1,39 @@
 import React from "react"
 import style from "@/assets/styles/dashboard.module.css"
-import { PiSlidersHorizontal, PiCaretLeft, PiCaretRight } from "@/utils"
+import { PiCaretLeft, PiCaretRight } from "@/utils"
+import RecipeCard from "./RecipeCard"
+import SectionTitle from "./SectionTitle"
+import Header from "./Header"
+import SectionIntroContainer from "../utils/SectionContainer"
 
 export default function Home() {
   return (
     <section className="dashboard-content">
-      <div className="flex items-center gap-4">
-        <input
-          type="text"
-          className={style.input}
-          name="search"
-          placeholder="What do you want to eat today?"
+      <Header />
+      <SectionIntroContainer>
+        <SectionTitle
+          title="Recommeded Recipes"
+          description="Based on your preferences"
         />
-        <button className={style.btn} name="filterBtn">
-          <PiSlidersHorizontal size={24} />
-        </button>
-      </div>
-      <div className="mt-10">
-        <div>
-          <h2 className="font-semibold">Recommeded Recipes</h2>
-          <p className="text-gray-600">Based on your preferences</p>
-        </div>
         <div className="flex items-center gap-4">
           <button className={style.btn}>
-            <PiCaretLeft size={24} />
+            <PiCaretLeft size={20} />
           </button>
           <button className={style.btn}>
-            <PiCaretRight size={24} />
+            <PiCaretRight size={20} />
           </button>
         </div>
+      </SectionIntroContainer>
+      <div className="mt-10">
+        <RecipeCard />
       </div>
+      <SectionIntroContainer>
+        <SectionTitle
+          title="Trending Recipes"
+          description="Cooked by people with similar preferences "
+        />
+
+      </SectionIntroContainer>
     </section>
   )
 }
