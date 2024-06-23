@@ -13,7 +13,9 @@ import {
   PiCaretRight,
   PiCaretLeft,
   PiUser,
-  PiSignOut
+  PiSignOut,
+  PiEyeClosed,
+  PiEye,
 } from "react-icons/pi"
 import { BsClock } from "react-icons/bs"
 import { FaRegStar, FaStarHalfAlt } from "react-icons/fa"
@@ -22,7 +24,7 @@ import {
   FaStarHalfStroke,
   FaPlus,
   FaArrowUpLong,
-  FaBars
+  FaBars,
 } from "react-icons/fa6"
 import { FiPlus } from "react-icons/fi"
 import { IoArrowRedoOutline } from "react-icons/io5"
@@ -39,6 +41,8 @@ export {
   IoIosHelpCircleOutline,
   PiHeart,
   PiCaretLeft,
+  PiEye,
+  PiEyeClosed,
   PiUser,
   PiSignOut,
   PiHeartBold,
