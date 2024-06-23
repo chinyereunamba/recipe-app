@@ -20,8 +20,8 @@ const Tag = ({ icon, tag }: TagProps) => {
 export default function RecipeCard() {
   const [liked, setLiked] = useState(false)
   return (
-    <div className="max-w-72 w-full min-h-64 bg-white rounded-xl">
-      <div className="h-48 border border-purple-800 rounded-xl relative">
+    <div className="max-w-72 w-full min-h-60 bg-white rounded-xl">
+      <div className="h-36 border border-purple-800 rounded-xl relative">
         {liked ? (
           <PiHeartBold
             onClick={() => setLiked(!liked)}
@@ -43,7 +43,7 @@ export default function RecipeCard() {
             <p>Mexican, Greens, Lunch</p>
           </div>
           <div className="flex gap-2 items-center">
-            <FaStar /> 3.8
+            <FaStar color="yellow" /> 3.8
           </div>
         </div>
         <div className="my-2 flex items-center gap-2">

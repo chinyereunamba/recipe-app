@@ -21,12 +21,12 @@ const FooterLink = ({ path, title }: FooterLinkProps) => {
 
 export default function Footer() {
   return (
-    <footer className=" bg-midnight_green text-lavender_blush py-12">
-      <div className="section flex flex-col lg:flex-row gap-4 lg:gap-16">
-        <div className="w-1/2 lg:border-r-2 lg:border-b-0 border-b-2 border-pearl-600">
+    <footer className="bg-midnight_green text-lavender_blush">
+      <div className={`section ${style.footer}`}>
+        <div className="lg:w-1/2 lg:border-r-2 lg:border-b-0 border-b-2 pb-5 lg:pb-0 border-pearl-600">
           <h3>Recipe app</h3>
         </div>
-        <div className="flex justify-between items-start w-1/2">
+        <div className="flex justify-between items-start lg:w-1/2">
           <ul className={style.footer_links}>
             <h4 className={style.link_title}>Useful Links</h4>
             <FooterLink path="/about" title="About" />
@@ -48,10 +48,11 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <small className="flex justify-center text-center font-semibold pt-4 text-pearl">
+      <small className="flex justify-center text-center font-semibold pb-12 text-pearl">
         All rights reserved. &copy; Copyright 2024.
         <Link href={"https://chinyereunamba.vercel.app"} target="_blank">
-         {" "} Chinyere Unamba
+          {" "}
+          Chinyere Unamba
         </Link>
       </small>
     </footer>

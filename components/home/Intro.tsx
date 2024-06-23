@@ -3,7 +3,7 @@ import React from "react"
 export default function Intro() {
   return (
     <section className="section min-h-[75dvh] w-full flex items-center">
-      <div className="flex flex-col gap-4 w-1/2 ">
+      <div className="flex flex-col gap-4 lg:w-1/2 ">
         <h1 className="font-bold text-[3rem] leading-snug text-balance">
           Recipes for your home cooked meals
         </h1>

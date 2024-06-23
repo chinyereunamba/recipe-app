@@ -22,6 +22,7 @@ import {
   FaStarHalfStroke,
   FaPlus,
   FaArrowUpLong,
+  FaBars
 } from "react-icons/fa6"
 import { FiPlus } from "react-icons/fi"
 import { IoArrowRedoOutline } from "react-icons/io5"
@@ -49,6 +50,7 @@ export {
   FaArrowUpLong,
   FaPlus,
   FaRegStar,
+  FaBars,
   FaStar,
   FaStarHalfAlt,
   FaStarHalfStroke,
