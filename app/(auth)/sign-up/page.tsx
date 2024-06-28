@@ -2,6 +2,7 @@
 
 import Form from "@/components/auth/Form"
 import React, { FormEvent, useState } from "react"
+import {FcGoogle} from '@/utils'
 
 export default function SignUp() {
   const [user, setUser] = useState({
@@ -13,12 +14,27 @@ export default function SignUp() {
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
+    const { email, name, password } = user
+    const data = {
+      email: email,
+      username: name, 
+      password: password
+    }
   }
 
   return (
-    <section>
+    <section className="section flex justify-center gap-4 flex-col items-center min-h-dvh">
+      <h1>Recipe app</h1>
+      <button className="max-w-[480px] w-full p-3  rounded-lg bg-white text-black">
+        <span className="flex items-center justify-center gap-3">
+          <FcGoogle size={24} /> Sign In with Google
+        </span>
+      </button>
+      <div className="max-w-[480px] w-full my-3">
+        <p className="relative before:h-1/2 before:w-2 before:bg-black">OR</p>
+      </div>
       <Form
-        title="Sign un"
+        btnName="Sign up"
         inputFields={[
           {
             name: "email",
@@ -54,6 +70,7 @@ export default function SignUp() {
             value: user.rePassword,
             handleChange(e) {
               setUser({ ...user, rePassword: e })
+              const checkPassword = ""
             },
           },
         ]}

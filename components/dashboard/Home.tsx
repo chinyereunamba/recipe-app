@@ -24,7 +24,9 @@ export default function Home() {
           </button>
         </div>
       </SectionIntroContainer>
-      <div className="mt-10">
+      <div className="mt-10 flex gap-5">
+        <RecipeCard />
+        <RecipeCard />
         <RecipeCard />
       </div>
       <SectionIntroContainer>
@@ -32,7 +34,11 @@ export default function Home() {
           title="Trending Recipes"
           description="Cooked by people with similar preferences "
         />
-
+        <div className="mt-10 flex gap-5">
+          <RecipeCard />
+          <RecipeCard />
+          <RecipeCard />
+        </div>
       </SectionIntroContainer>
     </section>
   )

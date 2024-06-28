@@ -10,16 +10,15 @@ type InputProps = {
 }
 
 type FormProps = {
-  title: string
+  btnName: string
   inputFields: InputProps[]
   submitHandler: (e: FormEvent) => void
 }
 
-export default function Form({ title, inputFields, submitHandler }: FormProps) {
+export default function Form({ btnName, inputFields, submitHandler }: FormProps) {
   const [showPassword, setShowPassword] = useState(false)
   return (
-    <div className="p-3 max-w-[500px]">
-      <h2>{title}</h2>
+    <div className="max-w-[480px] w-full">
       <form onSubmit={submitHandler}>
         {inputFields.map((field, index) => (
           <div className="my-3" key={index}>
@@ -27,7 +26,7 @@ export default function Form({ title, inputFields, submitHandler }: FormProps) {
               className="capitalize py-2 font-semibold"
               htmlFor={field.name}
             >
-              {field.name == "rePassword" ? "Re-enter Password" : field.name}
+              {field.name == "rePassword" ? "Reenter Password" : field.name}
             </label>
             <div className="relative">
               <input
@@ -66,7 +65,7 @@ export default function Form({ title, inputFields, submitHandler }: FormProps) {
             type="submit"
             className="p-3 border rounded-lg bg-midnight_green w-full text-white"
           >
-            {title}
+            {btnName}
           </button>
         </div>
       </form>
