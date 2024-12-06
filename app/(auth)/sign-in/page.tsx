@@ -6,28 +6,38 @@ import { FcGoogle } from "@/utils/index"
 import { signIn, useSession } from "next-auth/react"
 
 export default function SignIn() {
-  const {data:session} = useSession()
+  const { data: session } = useSession()
   const [user, setUser] = useState({
     email: "",
     password: "",
   })
 
-  const submitHandler = (e: FormEvent) => {
+  const submitHandler = async (e: FormEvent) => {
     e.preventDefault()
     const { email, password } = user
+    await signIn("credentials", {
+      email,
+      password,
+      redirect: true,
+      callbackUrl: "/dashboard",
+    })
   }
   return (
     <section className="section flex justify-center gap-4 flex-col items-center min-h-dvh">
       <h1>Recipe app</h1>
-      <button onClick={()=>signIn("google")} className="max-w-[480px] w-full p-3  rounded-lg bg-white text-black">
+      <button
+        onClick={() => signIn("google")}
+        className="max-w-[480px] w-full p-3  rounded-lg bg-white text-black"
+      >
         <span className="flex items-center justify-center gap-3">
-          <FcGoogle size={24} /> Sign In with Google
+          <FcGoogle size={24} /> Sign in with Google
         </span>
       </button>
       <div className="max-w-[480px] w-full">
         <p className="">OR</p>
       </div>
       <Form
+        formType="login"
         btnName="Sign in"
         inputFields={[
           {
@@ -50,6 +60,7 @@ export default function SignIn() {
           },
         ]}
         submitHandler={submitHandler}
+        disabledFnc={!user.email || !user.password}
       />
     </section>
   )

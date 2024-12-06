@@ -2,12 +2,12 @@
 
 import Form from "@/components/auth/Form"
 import React, { FormEvent, useState } from "react"
-import {FcGoogle} from '@/utils'
+import { FcGoogle } from "@/utils"
 
 export default function SignUp() {
   const [user, setUser] = useState({
     email: "",
-    name:"",
+    name: "",
     password: "",
     rePassword: "",
   })
@@ -17,17 +17,20 @@ export default function SignUp() {
     const { email, name, password } = user
     const data = {
       email: email,
-      username: name, 
-      password: password
+      username: name,
+      password: password,
     }
   }
 
   return (
     <section className="section flex justify-center gap-4 flex-col items-center min-h-dvh">
       <h1>Recipe app</h1>
-      <button className="max-w-[480px] w-full p-3  rounded-lg bg-white text-black">
+      <button
+        onClick={() => {}}
+        className="max-w-[480px] w-full p-3 rounded-lg bg-white text-black"
+      >
         <span className="flex items-center justify-center gap-3">
-          <FcGoogle size={24} /> Sign In with Google
+          <FcGoogle size={24} /> Sign up with Google
         </span>
       </button>
       <div className="max-w-[480px] w-full my-3">
@@ -75,6 +78,9 @@ export default function SignUp() {
           },
         ]}
         submitHandler={submitHandler}
+        disabledFnc={
+          !user.email || !user.password || !user.rePassword || !user.name
+        }
       />
     </section>
   )

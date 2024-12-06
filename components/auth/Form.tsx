@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react"
 import { PiEye, PiEyeClosed } from "@/utils"
+import Link from "next/link"
 
 type InputProps = {
   name: string
@@ -10,12 +11,22 @@ type InputProps = {
 }
 
 type FormProps = {
+  formType?: string
   btnName: string
   inputFields: InputProps[]
   submitHandler: (e: FormEvent) => void
+  disabledFnc?: boolean | undefined
+  loader?: boolean | undefined
 }
 
-export default function Form({ btnName, inputFields, submitHandler }: FormProps) {
+export default function Form({
+  formType,
+  btnName,
+  inputFields,
+  submitHandler,
+  disabledFnc,
+  loader,
+}: FormProps) {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <div className="max-w-[480px] w-full">
@@ -60,11 +71,20 @@ export default function Form({ btnName, inputFields, submitHandler }: FormProps)
             </div>
           </div>
         ))}
+        {formType == "login" && (
+          <div className="my-2">
+            <p>
+              <Link href={"/forgot-password"}>Forgot password?</Link>
+            </p>
+          </div>
+        )}
         <div className="my-2">
           <button
             type="submit"
-            className="p-3 border rounded-lg bg-midnight_green w-full text-white"
+            className={`p-3 border rounded-lg bg-midnight_green w-full text-white`}
+            disabled={disabledFnc}
           >
+            {loader}
             {btnName}
           </button>
         </div>
